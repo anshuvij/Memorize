@@ -38,10 +38,10 @@ struct MemorizeGame<CardContent> where CardContent : Equatable  {
         if let chosenIndex = cards.firstIndex(where: { $0.id == card.id }) {
             
             if !cards[chosenIndex].isFaceUp && !cards[chosenIndex].isMatched {
-                if let potenialIndex = indexOfOneAndOneFaceUpCard {
-                    if cards[chosenIndex].content == cards[potenialIndex].content {
+                if let potentialIndex = indexOfOneAndOneFaceUpCard {
+                    if cards[chosenIndex].content == cards[potentialIndex].content {
                         cards[chosenIndex].isMatched = true
-                        cards[potenialIndex].isMatched = true
+                        cards[potentialIndex].isMatched = true
                     }
                 }
                 else {
